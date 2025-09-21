@@ -13,19 +13,13 @@ const DonutChart = ({ isDark }) => {
     responsive: true,
     maintainAspectRatio: false,
     plugins: {
-      legend: {
-        display: false,
-      },
+      legend: { display: false },
       tooltip: {
         backgroundColor: isDark ? '#374151' : '#ffffff',
         titleColor: isDark ? '#ffffff' : '#1f2937',
         bodyColor: isDark ? '#ffffff' : '#1f2937',
-        borderColor: isDark ? '#4b5563' : '#e5e7eb',
-        borderWidth: 1,
         callbacks: {
-          label: function(context) {
-            return context.label + ': $' + context.parsed;
-          }
+          label: (context) => context.label + ': $' + context.parsed
         }
       },
     },

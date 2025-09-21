@@ -23,44 +23,26 @@ const BarChart = ({ isDark }) => {
     responsive: true,
     maintainAspectRatio: false,
     plugins: {
-      legend: {
-        display: false,
-      },
+      legend: { display: false },
       tooltip: {
         backgroundColor: isDark ? '#374151' : '#ffffff',
         titleColor: isDark ? '#ffffff' : '#1f2937',
         bodyColor: isDark ? '#ffffff' : '#1f2937',
-        borderColor: isDark ? '#4b5563' : '#e5e7eb',
-        borderWidth: 1,
       },
     },
     scales: {
       x: {
-        grid: {
-          display: false,
-        },
-        ticks: {
-          color: isDark ? '#9ca3af' : '#6b7280',
-          font: {
-            size: 12,
-          },
-        },
+        grid: { display: false },
+        ticks: { color: isDark ? '#9ca3af' : '#6b7280' },
       },
       y: {
         min: 0,
         max: 30,
-        grid: {
-          color: isDark ? '#374151' : '#f3f4f6',
-        },
+        grid: { color: isDark ? '#374151' : '#f3f4f6' },
         ticks: {
           color: isDark ? '#9ca3af' : '#6b7280',
-          font: {
-            size: 12,
-          },
           stepSize: 10,
-          callback: function(value) {
-            return value + 'M';
-          }
+          callback: (value) => value + 'M'
         },
       },
     },

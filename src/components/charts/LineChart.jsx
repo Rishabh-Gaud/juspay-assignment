@@ -25,50 +25,25 @@ const LineChart = ({ isDark }) => {
     responsive: true,
     maintainAspectRatio: false,
     plugins: {
-      legend: {
-        display: false,
-      },
+      legend: { display: false },
       tooltip: {
         backgroundColor: isDark ? '#374151' : '#ffffff',
         titleColor: isDark ? '#ffffff' : '#1f2937',
         bodyColor: isDark ? '#ffffff' : '#1f2937',
-        borderColor: isDark ? '#4b5563' : '#e5e7eb',
-        borderWidth: 1,
       },
     },
     scales: {
       x: {
-        grid: {
-          display: false,
-        },
-        ticks: {
-          color: isDark ? '#9ca3af' : '#6b7280',
-          font: {
-            size: 12,
-          },
-        },
+        grid: { display: false },
+        ticks: { color: isDark ? '#9ca3af' : '#6b7280' },
       },
       y: {
-        grid: {
-          color: isDark ? '#374151' : '#f3f4f6',
-        },
-        ticks: {
-          color: isDark ? '#9ca3af' : '#6b7280',
-          font: {
-            size: 12,
-          },
-        },
+        grid: { color: isDark ? '#374151' : '#f3f4f6' },
+        ticks: { color: isDark ? '#9ca3af' : '#6b7280' },
       },
     },
-    interaction: {
-      intersect: false,
-    },
-    elements: {
-      point: {
-        radius: 4,
-        hoverRadius: 6,
-      },
-    },
+    interaction: { intersect: false },
+    elements: { point: { radius: 4, hoverRadius: 6 } },
   };
 
   const data = {

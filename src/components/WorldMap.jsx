@@ -5,7 +5,7 @@ const WorldMap = ({ isDark }) => {
       style={{ background: 'var(--Primary-Light, rgba(255, 255, 255, 0.05))' }}
     >
       <img 
-        src="/world-map.png" 
+        src={isDark ? "/world-map-light.svg" : "/world-map-light.svg"}
         alt="World Map with Revenue Locations"
         className="w-full h-full object-contain rounded-lg"
       />

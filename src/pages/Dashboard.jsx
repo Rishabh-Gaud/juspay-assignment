@@ -5,19 +5,14 @@ import DonutChart from '../components/charts/DonutChart';
 import WorldMap from '../components/WorldMap';
 
 const Dashboard = ({ isDark, activeSection }) => {
-
   if (activeSection === 'ecommerce') {
     return (
       <div className={`flex-1 ${isDark ? 'bg-gray-950' : 'bg-gray-50'} overflow-y-auto`}>
         <div className="p-6">
-          {/* Page Title */}
           <h1 className={`text-2xl font-bold ${isDark ? 'text-white' : 'text-gray-900'} mb-6`}>
             eCommerce
           </h1>
-
-          {/* Top Metrics Cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
-            {/* Customers Card */}
             <div className={`${isDark ? 'bg-gray-700' : 'bg-white'} rounded-2xl p-6`}>
               <div className="mb-4">
                 <span className={`text-sm font-medium ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>Customers</span>
@@ -33,13 +28,12 @@ const Dashboard = ({ isDark, activeSection }) => {
               </div>
             </div>
 
-            {/* Orders Card */}
-            <div className={`${isDark ? 'bg-gray-800' : 'bg-gray-800'} rounded-2xl p-6`}>
+            <div className="bg-gray-800 rounded-2xl p-6">
               <div className="mb-4">
-                <span className={`text-sm font-medium ${isDark ? 'text-gray-300' : 'text-gray-300'}`}>Orders</span>
+                <span className="text-sm font-medium text-gray-300">Orders</span>
               </div>
               <div className="flex items-center justify-between">
-                <span className={`text-3xl font-bold ${isDark ? 'text-white' : 'text-white'}`}>1,219</span>
+                <span className="text-3xl font-bold text-white">1,219</span>
                 <div className="flex items-center space-x-1">
                   <span className="text-red-500 text-sm font-medium">-0.03%</span>
                   <svg className="w-4 h-4 text-red-500" fill="currentColor" viewBox="0 0 20 20">
@@ -49,13 +43,12 @@ const Dashboard = ({ isDark, activeSection }) => {
               </div>
             </div>
 
-            {/* Revenue Card */}
-            <div className={`${isDark ? 'bg-gray-800' : 'bg-gray-800'} rounded-2xl p-6`}>
+            <div className="bg-gray-800 rounded-2xl p-6">
               <div className="mb-4">
-                <span className={`text-sm font-medium ${isDark ? 'text-gray-300' : 'text-gray-300'}`}>Revenue</span>
+                <span className="text-sm font-medium text-gray-300">Revenue</span>
               </div>
               <div className="flex items-center justify-between">
-                <span className={`text-3xl font-bold ${isDark ? 'text-white' : 'text-white'}`}>$695</span>
+                <span className="text-3xl font-bold text-white">$695</span>
                 <div className="flex items-center space-x-1">
                   <span className="text-green-500 text-sm font-medium">+15.03%</span>
                   <svg className="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20">
@@ -65,7 +58,6 @@ const Dashboard = ({ isDark, activeSection }) => {
               </div>
             </div>
 
-            {/* Growth Card */}
             <div className={`${isDark ? 'bg-gray-700' : 'bg-white'} rounded-2xl p-6`}>
               <div className="mb-4">
                 <span className={`text-sm font-medium ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>Growth</span>
@@ -82,9 +74,7 @@ const Dashboard = ({ isDark, activeSection }) => {
             </div>
           </div>
 
-          {/* Charts Row */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
-            {/* Projections vs Actuals Chart */}
             <div className={`${isDark ? 'bg-gray-800' : 'bg-white'} rounded-lg p-6`}>
               <h3 className={`text-lg font-semibold ${isDark ? 'text-white' : 'text-gray-900'} mb-4`}>
                 Projections vs Actuals
@@ -94,7 +84,6 @@ const Dashboard = ({ isDark, activeSection }) => {
               </div>
             </div>
 
-            {/* Revenue by Location */}
             <div className={`${isDark ? 'bg-gray-800' : 'bg-white'} rounded-lg p-6`}>
               <h3 className={`text-lg font-semibold ${isDark ? 'text-white' : 'text-gray-900'} mb-4`}>
                 Revenue by Location
@@ -125,7 +114,6 @@ const Dashboard = ({ isDark, activeSection }) => {
             </div>
           </div>
 
-          {/* Revenue Line Chart */}
           <div className={`${isDark ? 'bg-gray-800' : 'bg-white'} rounded-lg p-6 mb-6`}>
             <div className="flex items-center justify-between mb-4">
               <h3 className={`text-lg font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>
@@ -151,9 +139,7 @@ const Dashboard = ({ isDark, activeSection }) => {
             </div>
           </div>
 
-          {/* Bottom Section */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            {/* Top Selling Products */}
             <div className={`${isDark ? 'bg-gray-800' : 'bg-white'} rounded-lg p-6`}>
               <h3 className={`text-lg font-semibold ${isDark ? 'text-white' : 'text-gray-900'} mb-4`}>
                 Top Selling Products
@@ -212,7 +198,6 @@ const Dashboard = ({ isDark, activeSection }) => {
               </div>
             </div>
 
-            {/* Total Sales */}
             <div className={`${isDark ? 'bg-gray-800' : 'bg-white'} rounded-lg p-6`}>
               <h3 className={`text-lg font-semibold ${isDark ? 'text-white' : 'text-gray-900'} mb-4`}>
                 Total Sales
@@ -259,11 +244,9 @@ const Dashboard = ({ isDark, activeSection }) => {
     );
   }
 
-  // Default Dashboard (Order List)
   return (
     <div className={`flex-1 ${isDark ? 'bg-gray-950' : 'bg-gray-100'} overflow-y-auto`}>
       <div className="p-6">
-        {/* Order Table */}
         <OrderTable isDark={isDark} />
       </div>
     </div>
