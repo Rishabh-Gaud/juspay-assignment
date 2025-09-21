@@ -2,6 +2,8 @@
 
 A modern React dashboard application for eCommerce analytics and order management.
 
+**Live Demo**: [https://juspay-assignment-sandy.vercel.app/](https://juspay-assignment-sandy.vercel.app/)
+
 ## Quick Start
 
 ```bash
