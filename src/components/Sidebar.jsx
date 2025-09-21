@@ -8,7 +8,9 @@ import {
   Settings,
   X,
   Folder,
-  Grid3X3
+  ShoppingCart,
+  FolderOpen,
+  GraduationCap
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -20,10 +22,10 @@ const Sidebar = ({ activeSection, onSectionChange, isDark, showMobile, onCloseMo
     ]},
     { section: 'recently', label: 'Recently', items: [] },
     { section: 'dashboards', label: 'Dashboards', items: [
-      { id: 'default', label: 'Default', icon: Grid3X3 },
-      { id: 'ecommerce', label: 'eCommerce', icon: Grid3X3 },
-      { id: 'projects-dash', label: 'Projects', icon: Grid3X3 },
-      { id: 'online-courses', label: 'Online Courses', icon: Grid3X3 }
+      { id: 'default', label: 'Default', icon: LayoutDashboard },
+      { id: 'ecommerce', label: 'eCommerce', icon: ShoppingCart },
+      { id: 'projects-dash', label: 'Projects', icon: FolderOpen },
+      { id: 'online-courses', label: 'Online Courses', icon: GraduationCap }
     ]},
     { section: 'pages', label: 'Pages', items: [
       { id: 'user-profile', label: 'User Profile', icon: User, nested: [
